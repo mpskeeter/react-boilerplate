@@ -1,5 +1,9 @@
 {
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -7,11 +11,18 @@
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "no-console": "off",
     "strict": ["error", "global"],
     "curly": "warn"
-  }
+  },
+  "plugins": [
+    "jest"
+  ]
 }
